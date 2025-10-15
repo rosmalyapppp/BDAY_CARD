@@ -1,54 +1,115 @@
-body {
-    box-sizing: border-box;
-}
+let isPlaying = false;
 
-.music-disc {
-    animation: spin 3s linear infinite;
-    animation-play-state: paused;
-}
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
 
-.music-disc.playing {
-    animation-play-state: running;
-}
+    document.getElementById(pageId).classList.add('active');
 
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.page {
-    display: none;
-}
-
-.page.active {
-    display: block;
-}
-
-.gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.cake-animation {
-    animation: bounce 2s ease-in-out infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
+    if (pageId === 'calendar') {
+        generateCalendar();
     }
 }
 
-.wish-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+function toggleMusic() {
+    const disc = document.querySelector('.music-disc');
+    const playIcon = document.getElementById('playIcon');
+    
+    isPlaying = !isPlaying;
+    if (isPlaying) {
+        disc.classList.add('playing');
+        playIcon.textContent = '⏸';
+    } else {
+        disc.classList.remove('playing');
+        playIcon.textContent = '▶';
+    }
 }
 
-.wish-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+function blowCandles() {
+    const wishMessage = document.getElementById('wishMessage');
+    wishMessage.textContent = '🌟 Your wish has been made! May all your dreams come true! 🌟';
+    wishMessage.classList.remove('opacity-0');
+    wishMessage.classList.add('opacity-100');
+
+    setTimeout(() => {
+        wishMessage.innerHTML = '✨🎉 Happy Birthday! 🎉✨';
+    }, 2000);
 }
+
+function generateCalendar() {
+    const calendarGrid = document.getElementById('calendarGrid');
+    const birthdayDate = document.getElementById('birthdayDate');
+    const today = new Date();
+
+    birthdayDate.textContent = today.toLocaleDateString('en-US', { 
+        weekday: 'long', 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+    });
+
+    const year = today.getFullYear();
+    const month = today.getMonth();
+    const firstDay = new Date(year, month, 1).getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+    calendarGrid.innerHTML = '';
+
+    for (let i = 0; i < firstDay; i++) {
+        const emptyCell = document.createElement('div');
+        emptyCell.className = 'h-12';
+        calendarGrid.appendChild(emptyCell);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+        const dayCell = document.createElement('div');
+        dayCell.className = 'h-12 flex items-center justify-center text-white rounded-lg';
+        
+        if (day === today.getDate()) {
+            dayCell.className += ' bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-xl';
+            dayCell.innerHTML = `${day} 🎂`;
+        } else {
+            dayCell.className += ' bg-white/10 hover:bg-white/20 transition-colors cursor-pointer';
+            dayCell.textContent = day;
+        }
+
+        calendarGrid.appendChild(dayCell);
+    }
+}
+
+function playWish(wishNumber) {
+    const messages = [
+        "Playing heartfelt message from your loving family! 💕",
+        "Your friends have something special to say! 🎉",
+        "A surprise message just for you! ✨",
+        "Birthday blessings coming your way! 🌈",
+        "Time to dream big - this message will inspire you! ⭐",
+        "Let the celebration begin with this special message! 🎊"
+    ];
+
+    const overlay = document.createElement('div');
+    overlay.className = 'fixed inset-0 bg-black/50 flex items-center justify-center z-50';
+    overlay.innerHTML = `
+        <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 text-center max-w-md mx-4">
+            <div class="text-6xl mb-4">🎥</div>
+            <h3 class="text-2xl font-bold text-white mb-4">Playing Message ${wishNumber}</h3>
+            <p class="text-white/90 mb-6">${messages[wishNumber - 1]}</p>
+            <button onclick="this.parentElement.parentElement.remove()" class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors">
+                Close
+            </button>
+        </div>
+    `;
+    
+    document.body.appendChild(overlay);
+
+    setTimeout(() => {
+        if (overlay.parentElement) {
+            overlay.remove();
+        }
+    }, 3000);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    generateCalendar();
+});
+
