@@ -25,7 +25,8 @@ body {
 }
 
 .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image:
+url('https://photos.app.goo.gl/hsiggqmqQZaKLFYw5');
 }
 
 .cake-animation {
@@ -52,3 +53,4 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+
