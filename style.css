@@ -60,9 +60,9 @@ body {
 
 .menu-container {
     position: fixed;
-    top: 45%;
+    top: 30%;
     left: 160px;
-    transform: translateY(-45%);
+    transform: translateY(-30%);
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -72,10 +72,10 @@ body {
 
 .menu-item > div {
     width: 100px;
-    padding: 16px 12px;
+    padding: 12px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: white(10px);
+    backdrop-filter: blur(10px);
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
@@ -100,6 +100,7 @@ body {
         margin-top: 20px;
     }
 }
+
 
 
 
