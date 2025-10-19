@@ -139,6 +139,7 @@ body {
     transform: translate(-50%, -50%);
     object-fit: cover;
     z-index: 0;
+    pointer-events: none;
 }
 
 #calendar .calendar-content {
@@ -182,6 +183,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
 
 
 
