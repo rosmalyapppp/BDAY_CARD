@@ -60,9 +60,9 @@ body {
 
 .menu-container {
     position: fixed;
-    top: 60%;
-    left: 120px;
-    transform: translateY(-60%);
+    top: 150%;
+    left: 50px;
+    transform: translateY(-150%);
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -71,7 +71,7 @@ body {
 }
 
 .menu-item > div {
-    width: 200px;
+    width: 300px;
     padding: 12px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
@@ -100,6 +100,7 @@ body {
         margin-top: 20px;
     }
 }
+
 
 
 
