@@ -33,13 +33,6 @@ body {
     background-attachment: fixed;
 }
 
-.calendar-bg {
-  background-image: url('CALENDAR.mp4');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .cake-animation {
     animation: bounce 2s ease-in-out infinite;
 }
@@ -130,6 +123,14 @@ body {
 </style>
 
 }
+
+.calendar-bg {
+  background-image: url('CALENDAR.mp4');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 
 
