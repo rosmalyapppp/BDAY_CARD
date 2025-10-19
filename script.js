@@ -111,7 +111,15 @@ function playWish(wishNumber) {
 
 document.addEventListener('DOMContentLoaded', function() {
     generateCalendar();
+
+    document.querySelectorAll('.menu-box').forEach(box => {
+        box.addEventListener('click', () => {
+            const pageId = box.dataset.page;
+            showPage(pageId);
+        });
+    });
 });
+
 
 
 
