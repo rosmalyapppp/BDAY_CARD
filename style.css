@@ -29,7 +29,7 @@ body {
     background-image: url('OCTOBER.jpg');
     background-size: cover;
     background-position: center;
-    bacjground-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
@@ -75,7 +75,7 @@ body {
     padding: 8px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(50px)
+    backdrop-filter: blur(50px);
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
@@ -86,8 +86,8 @@ body {
 }
 
 .menu-item > div:hover {
-    transform: scale(1.05)
-    background: rgba(255, 255, 255, 0.2)
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -100,7 +100,6 @@ body {
         margin-top: 50px;
     }
     
-<style>
 @keyframes candleBounce {
   0%, 100% {
     transform: translateY(0);
@@ -125,11 +124,20 @@ body {
 }
 
 #calendar {
-    background-image: url('CALENDAR.mp4');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
+
+#calendar .calendar-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 
 
 
