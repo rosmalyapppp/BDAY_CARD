@@ -103,7 +103,7 @@ function playWish(wishNumber) {
     }, 3000);
 }
 
-<script>
+
 function showPage(pageId) {
   const pages = document.querySelectorAll('.page');
   
@@ -132,7 +132,7 @@ function openLetter1() {
 function openLetter2() {
   showPage('letter2');
 }
-</script>
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
