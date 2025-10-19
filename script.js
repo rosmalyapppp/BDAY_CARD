@@ -8,9 +8,23 @@ function showPage(pageId) {
     if (pageId === 'calendar') generateCalendar();
 }
 
+function toggleMusic() {
+    const disc = document.querySelector('.music-disc');
+    const playIcon = document.getElementById('playIcon');
+    
+    isPlaying = !isPlaying;
+    if (isPlaying) {
+        disc.classList.add('playing');
+        playIcon.textContent = '⏸';
+    } else {
+        disc.classList.remove('playing');
+        playIcon.textContent = '▶';
+    }
+}
+
 function blowCandles() {
     const wishMessage = document.getElementById('wishMessage');
-    wishMessage.textContent = '🌟 Your wish has been made! May all your dreams come true! 🌟';
+   wishMessage.textContent = '🌟 Your wish has been made! May all your dreams come true! 🌟';
     wishMessage.classList.remove('opacity-0');
     wishMessage.classList.add('opacity-100', 'text-pink-500');
 
@@ -105,96 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-// =====================
-// 🎵 MUSIC & PAGE CONTROL FINAL VERSION
-// =====================
-document.addEventListener("DOMContentLoaded", () => {
-  const pages = document.querySelectorAll(".page");
-  const buttons = document.querySelectorAll(".nav-btn, .menu-box");
-  const bgMusic = document.getElementById("bgMusic");
-  const calendarMusic = document.getElementById("calendarMusic");
-  const musicControl = document.getElementById("musicControl");
-  const musicDisc = document.querySelector(".music-disc");
-  const playPauseBtn = document.getElementById("playPauseBtn");
-
-  let musicPlaying = false;
-
-  // 🎵 Toggle musik utama (home, cake, wishes)
-  function toggleMusic() {
-    if (!musicPlaying) {
-      bgMusic.play();
-      musicDisc.classList.add("animate-spin");
-    } else {
-      bgMusic.pause();
-      musicDisc.classList.remove("animate-spin");
-    }
-    musicPlaying = !musicPlaying;
-  }
-
-  // 🎵 Toggle musik kalender
-  function toggleCalendarMusic() {
-    if (calendarMusic.paused) {
-      calendarMusic.play();
-      playPauseBtn.textContent = "⏸";
-    } else {
-      calendarMusic.pause();
-      playPauseBtn.textContent = "▶";
-    }
-  }
-
-  // 🧭 Navigasi antar halaman
-  function showPage(pageId) {
-    pages.forEach((p) => p.classList.remove("active"));
-    document.getElementById(pageId).classList.add("active");
-
-    if (["home", "cake", "wishes"].includes(pageId)) {
-      musicControl.classList.remove("hidden");
-      document.getElementById("calendarMusicBox").classList.add("hidden");
-      calendarMusic.pause();
-
-      if (!musicPlaying) {
-        bgMusic.play();
-        musicDisc.classList.add("animate-spin");
-        musicPlaying = true;
-      }
-    } else if (pageId === "calendar") {
-      musicControl.classList.add("hidden");
-      document.getElementById("calendarMusicBox").classList.remove("hidden");
-
-      bgMusic.pause();
-      musicDisc.classList.remove("animate-spin");
-      musicPlaying = false;
-
-      generateCalendar();
-    }
-  }
-
-  // 🧩 Event listener
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => showPage(btn.dataset.page));
-  });
-
-  musicDisc.addEventListener("click", toggleMusic);
-  playPauseBtn.addEventListener("click", toggleCalendarMusic);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
