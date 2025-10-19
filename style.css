@@ -61,22 +61,24 @@ body {
 .menu-container {
     position: fixed;
     top: 50%;
-    left: 40px;
+    left: 100px;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
     alig-items: flex-start;
     z-index: 100;
 }
 
-.menu-item >div {
-    width: 220px;
+.menu-item > div {
+    width: 160px;
+    padding: 16px;
+    border-radius: 16px;
 }
 
-.menu-item:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateX(8px)
+.menu-item > div:hover {
+    transform: scale(1.05)
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -89,6 +91,7 @@ body {
         margin-top: 20px;
     }
 }
+
 
 
 
