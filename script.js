@@ -77,12 +77,8 @@ function generateCalendar() {
 
 function playWish(wishNumber) {
     const messages = [
-        "Playing heartfelt message from your loving family! 💕",
-        "Your friends have something special to say! 🎉",
         "A surprise message just for you! ✨",
         "Birthday blessings coming your way! 🌈",
-        "Time to dream big - this message will inspire you! ⭐",
-        "Let the celebration begin with this special message! 🎊"
     ];
 
     const overlay = document.createElement('div');
@@ -119,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
