@@ -60,24 +60,29 @@ body {
 
 .menu-container {
     position: fixed;
-    top: 50%;
-    left: 200px;
-    transform: translateY(-50%);
+    top: 45%;
+    left: 160px;
+    transform: translateY(-45%);
     display: flex;
     flex-direction: column;
     gap: 16px;
-    alig-items: flex-start;
+    align-items: center;
     z-index: 30;
 }
 
 .menu-item > div {
     width: 100px;
-    padding: 12px;
+    padding: 16px 12px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     cursor: pointer;
     transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-item > div:hover {
@@ -95,6 +100,7 @@ body {
         margin-top: 20px;
     }
 }
+
 
 
 
