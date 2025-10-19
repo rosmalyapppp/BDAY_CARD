@@ -23,23 +23,27 @@
         </div>
     </nav>
 
-    <!-- Music Player -->
-    <audio id="bgMusic" loop>
-        <source src="" type="audio/mpeg">
-    </audio>
+<!-- Music Player (General) -->
+<audio id="bgMusic" loop>
+    <source src="music1.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="calendarMusicAudio" loop>
+    <source src="music2.mp3" type="audio/mpeg">
+</audio>
+
+<div id="musicControl" class="fixed bottom-6 right-6 z-20 hidden pointer-events-none">
+    <div class="music-disc w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full flex items-center justify-center text-white text-3x1 shadow-lg cursor-pointer transition-all pointer-events-auto" onclick="toggleMusic('bgMusic')">
+        🎶
+    </div>
+</div>
+
+<div id="calendarMusic" class="fixed bottom-6 right-6 z-20 hidden pointer-events-none">
+    <button id="playPauseBtn" class="bg-white/20 hover:bg-white/30 text-white px-4 py-3 rounded-full text-2xl shadow-lg backdrop-blur-md transition-all duration-300 pointer-events-auto" onclick="toggleMusic('calendarMusicAudio')">
+        ⏸
+    </button>
+</div>
     
-    <div id="musicControl" class="fixed bottom-6 right-6 z-20 pointer-events-none">
-        <div class="music-disc w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-400 rounded-full flex items-center justify-center text-white text-3x1 shadow-lg cursor-pointer transition-all pointer-events-auto">
-             🎶
-        </div>
-    </div>
-
-    <div id="calendarMusic" class="fixed bottom-6 right-6 z-20 pointer-events-none">
-        <button id="playPuseBtn" class="bg-white/20 hover:bg-white/30 text-white px-4 py-3 rounded-full text 2x1 shadow-lg backdrop-blur-md transition-all duration-300 pointer-events-auto">
-             ⏸
-        </button>
-    </div>
-
     <!-- Home Page -->
     <div id="home" class="page active">
         <div class="max-w-6xl mx-auto px-4 py-10 text-center">
@@ -137,6 +141,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
