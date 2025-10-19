@@ -99,7 +99,7 @@ body {
         gap: 12px;
         margin-top: 50px;
     }
-    
+    }  
 @keyframes candleBounce {
   0%, 100% {
     transform: translateY(0);
@@ -119,9 +119,7 @@ body {
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
-</style>
 
-}
 
 #calendar {
     position: relative;
@@ -186,6 +184,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
 
 
 
