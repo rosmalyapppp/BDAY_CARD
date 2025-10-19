@@ -120,6 +120,104 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const bgMusic = document.getElementById('bgMusic');
+const musicControl = document.getElementById('musicControl');
+const musicDisc = document.querySelector('.music-disc');
+
+let musicPlaying = false;
+
+function toggleMusic() {
+  if (!musicPlaying) {
+    bgMusic.play();
+    musicDisc.classList.add('animate-spin', 'playing');
+  } else {
+    bgMusic.pause();
+    musicDisc.classList.remove('animate-spin', 'playing');
+  }
+  musicPlaying = !musicPlaying;
+}
+
+musicDisc.addEventListener('click', toggleMusic);
+
+// Control visibility by page
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(p => p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+
+  if (['home', 'cake', 'wishes'].includes(pageId)) {
+    musicControl.classList.remove('hidden');
+    if (!musicPlaying) {
+      bgMusic.play();
+      musicPlaying = true;
+      musicDisc.classList.add('animate-spin');
+    }
+  } else {
+    musicControl.classList.add('hidden');
+    bgMusic.pause();
+    musicDisc.classList.remove('animate-spin');
+    musicPlaying = false;
+  }
+}
+
+const bgMusic = document.getElementById('bgMusic');
+const musicControl = document.getElementById('musicControl');
+const musicDisc = document.querySelector('.music-disc');
+const calendarMusic = document.getElementById('calendarMusic');
+const playPauseBtn = document.getElementById('playPauseBtn');
+
+let musicPlaying = false;
+
+function toggleMusic() {
+  if (!musicPlaying) {
+    bgMusic.play();
+    musicDisc.classList.add('animate-spin');
+  } else {
+    bgMusic.pause();
+    musicDisc.classList.remove('animate-spin');
+  }
+  musicPlaying = !musicPlaying;
+}
+
+musicDisc.addEventListener('click', toggleMusic);
+
+playPauseBtn.addEventListener('click', () => {
+  if (bgMusic.paused) {
+    bgMusic.play();
+    playPauseBtn.textContent = '⏸';
+  } else {
+    bgMusic.pause();
+    playPauseBtn.textContent = '▶';
+  }
+});
+
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(p => p.classList.remove('active'));
+  document.getElementById(pageId).classList.add('active');
+
+  if (['home', 'cake', 'wishes'].includes(pageId)) {
+    musicControl.classList.remove('hidden');
+    calendarMusic.classList.add('hidden');
+    if (!musicPlaying) {
+      bgMusic.play();
+      musicDisc.classList.add('animate-spin');
+      musicPlaying = true;
+    }
+  } 
+      
+  else if (pageId === 'calendar') {
+    musicControl.classList.add('hidden');
+    calendarMusic.classList.remove('hidden');
+    bgMusic.pause();
+    playPauseBtn.textContent = '▶';
+    musicDisc.classList.remove('animate-spin');
+    musicPlaying = false;
+    generateCalendar();
+  }
+}
+
+
 
 
 
