@@ -107,24 +107,24 @@ function playWish(wishNumber) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    generateCalendar();
 
-const menuBoxes = document.querySelectorAll('.menu-box');
+    const navButtons = document.querySelectorAll('.nav-btn');
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const pageId = this.dataset.page;
+            showPage(pageId);
+        });
+    });
+
+    const menuBoxes = document.querySelectorAll('.menu-box');
     menuBoxes.forEach(box => {
         box.addEventListener('click', function() {
             const pageId = this.dataset.page;
             showPage(pageId);
-        });
-    });
-
-const navButtons = document.querySelectorAll('.nav-btn');
-    navButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const pageId = btn.dataset.page;
-            showPage(pageId);
-        });
+        });
     });
 });
+
 
 
 
