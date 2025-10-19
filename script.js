@@ -3,12 +3,9 @@ let isPlaying = false;
 function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
-
     document.getElementById(pageId).classList.add('active');
 
-    if (pageId === 'calendar') {
-        generateCalendar();
-    }
+    if (pageId === 'calendar') generateCalendar();
 }
 
 function toggleMusic() {
@@ -120,6 +117,7 @@ const menuBoxes = document.querySelectorAll('.menu-box');
         });
     });
 });
+
 
 
 
