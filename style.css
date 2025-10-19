@@ -82,6 +82,18 @@ body {
     transform: translateX(8px)
 }
 
+@media (max-width: 768px) {
+    .menu-container {
+        position: static;
+        transform: none;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 80%;
+    }
+}
+
 
 
 
