@@ -27,7 +27,11 @@ function toggleMusic() {
 
 function blowCandles() {
     const wishMessage = document.getElementById('wishMessage');
-    wishMessage.textContent = '🌟 Your wish has been made! May all your dreams come true! 🌟';
+    wishMessage.innerHTML = `
+        <img src="bubble.png" alt="Sparkle" class="inline w-6 h-6 mx-1 animate-pulse">
+        Your wish has been made! May all your dreams come true!
+        <img src="bubble.png" alt="Sparkle" class="inline w-6 h-6 mx-1 animate-pulse">
+    `;
     wishMessage.classList.remove('opacity-0');
     wishMessage.classList.add('opacity-100', 'text-pink-150');
 
@@ -113,6 +117,7 @@ function playWish(wishNumber) {
 document.addEventListener('DOMContentLoaded', function() {
     generateCalendar();
 });
+
 
 
 
