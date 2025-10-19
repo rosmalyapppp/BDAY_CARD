@@ -106,23 +106,18 @@ function playWish(wishNumber) {
     }, 3000);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM loaded");
 
-    const navButtons = document.querySelectorAll('.nav-btn');
-    navButtons.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const pageId = this.dataset.page;
-            showPage(pageId);
-        });
-    });
+  const buttons = document.querySelectorAll(".nav-btn, .menu-box");
 
-    const menuBoxes = document.querySelectorAll('.menu-box');
-    menuBoxes.forEach(box => {
-        box.addEventListener('click', function() {
-            const pageId = this.dataset.page;
-            showPage(pageId);
-        });
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const pageId = btn.dataset.page;
+      console.log("Navigating to:", pageId);
+      showPage(pageId);
     });
+  });
 });
 
 
