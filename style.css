@@ -17,19 +17,6 @@ body {
     to { transform: rotate(360deg); }
 }
 
-.animate-spin {
-    animation: spin 5s linear infinite'
-}
-
-#playPauseBtn {
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s ease;
-}
-
-#playPauseBtn: hover {
-    transform: scale(1.1);
-}
-
 .page {
     display: none;
 }
@@ -199,38 +186,6 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
