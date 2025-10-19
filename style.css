@@ -60,7 +60,7 @@ body {
 
 .menu-container {
     position: fixed;
-    top: 50%;
+    top: 55%;
     left: 30px;
     transform: translateY(-50%);
     display: flex;
@@ -89,6 +89,7 @@ body {
         width: 80%;
     }
 }
+
 
 
 
