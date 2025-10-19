@@ -116,7 +116,16 @@ const menuBoxes = document.querySelectorAll('.menu-box');
             showPage(pageId);
         });
     });
+
+const navButtons = document.querySelectorAll('.nav-btn');
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const pageId = btn.dataset.page;
+            showPage(pageId);
+        });
+    });
 });
+
 
 
 
