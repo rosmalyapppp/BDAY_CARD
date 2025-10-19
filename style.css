@@ -100,25 +100,30 @@ body {
         margin-top: 50px;
     }
     
-@keyframes bounce-candle {
+<style>
+@keyframes candleBounce {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
   }
 }
 
 .bounce {
-  animation: bounce-candle 1.2s ease-in-out infinite;
+  display: inline-block; /* penting biar transform bisa bekerja */
+  animation: candleBounce 1.4s ease-in-out infinite;
 }
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+</style>
 
 }
+
 
 
 
