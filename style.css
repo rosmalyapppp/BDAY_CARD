@@ -71,7 +71,7 @@ body {
 }
 
 .menu-item > div {
-    width: 180px;
+    width: 160px;
     padding: 8px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
@@ -186,6 +186,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
 
 
 
