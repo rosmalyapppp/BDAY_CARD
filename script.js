@@ -103,6 +103,37 @@ function playWish(wishNumber) {
     }, 3000);
 }
 
+<script>
+function showPage(pageId) {
+  const pages = document.querySelectorAll('.page');
+  
+  pages.forEach(page => {
+    if (!page.classList.contains('hidden')) {
+           page.classList.add('opacity-0');
+      setTimeout(() => {
+        page.classList.add('hidden');
+      }, 300);
+    }
+  });
+
+  const targetPage = document.getElementById(pageId);
+  targetPage.classList.remove('hidden');
+  targetPage.classList.add('opacity-0');
+
+   setTimeout(() => {
+    targetPage.classList.remove('opacity-0');
+  }, 50);
+}
+
+function openLetter1() {
+  showPage('letter1');
+}
+
+function openLetter2() {
+  showPage('letter2');
+}
+</script>
+
 document.addEventListener("DOMContentLoaded", () => {
 
   const buttons = document.querySelectorAll(".nav-btn, .menu-box");
@@ -115,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
