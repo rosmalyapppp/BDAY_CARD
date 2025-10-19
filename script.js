@@ -65,7 +65,7 @@ function generateCalendar() {
         
         if (day === 19) {
             dayCell.classList.add('bg-gradient-to-r', 'from-pink-400', 'to-purple-500', 'text-black', 'text-xl', 'font-bold');
-            dayCell.innerHTML = '${day} 🎂';
+            dayCell.innerHTML = `${day} 🎂`;
         } else {
             dayCell.textContent = day;
         }
@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
