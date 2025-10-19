@@ -26,7 +26,7 @@ function blowCandles() {
     const wishMessage = document.getElementById('wishMessage');
    wishMessage.textContent = '🌟 Your wish has been made! May all your dreams come true! 🌟';
     wishMessage.classList.remove('opacity-0');
-    wishMessage.classList.add('opacity-100', 'text-pink-150');
+    wishMessage.classList.add('opacity-100', 'text-pink-500');
 
     setTimeout(() => {
         wishMessage.innerHTML = '✨🎉 Happy Birthday! 🎉✨';
@@ -65,7 +65,7 @@ function generateCalendar() {
         
         if (day === today.getDate()) {
             dayCell.classList.add('bg-gradient-to-r', 'from-yellow-400', 'to-orange-500', 'text-black', 'text-xl', 'font-bold');
-            dayCell.innerHTML = ${day} 🎂;
+            dayCell.innerHTML = '${day} 🎂';
         } else {
             dayCell.textContent = day;
         }
@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 
