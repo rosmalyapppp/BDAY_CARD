@@ -107,7 +107,6 @@ function playWish(wishNumber) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM loaded");
 
   const buttons = document.querySelectorAll(".nav-btn, .menu-box");
 
@@ -119,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
