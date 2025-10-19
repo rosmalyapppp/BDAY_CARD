@@ -64,13 +64,12 @@ function generateCalendar() {
 
     for (let day = 1; day <= daysInMonth; day++) {
         const dayCell = document.createElement('div');
-        dayCell.className = 'h-12 flex items-center justify-center text-white rounded-lg';
+        dayCell.className = 'calendar-day flex items-center justify-center';
         
         if (day === today.getDate()) {
-            dayCell.className += ' bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-xl';
-            dayCell.innerHTML = `${day} 🎂`;
+            dayCell.classList.add('bg-gradient-to-r', 'from-yellow-400', 'to-orange-500', 'text-black', 'text-xl', 'font-bold');
+            dayCell.innerHTML = ${day} 🎂;
         } else {
-            dayCell.className += ' bg-white/10 hover:bg-white/20 transition-colors cursor-pointer';
             dayCell.textContent = day;
         }
 
@@ -113,6 +112,7 @@ function playWish(wishNumber) {
 document.addEventListener('DOMContentLoaded', function() {
     generateCalendar();
 });
+
 
 
 
