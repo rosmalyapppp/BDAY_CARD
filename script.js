@@ -112,13 +112,15 @@ function playWish(wishNumber) {
 document.addEventListener('DOMContentLoaded', function() {
     generateCalendar();
 
-    document.querySelectorAll('.menu-box').forEach(box => {
-        box.addEventListener('click', () => {
-            const pageId = box.dataset.page;
+const menuBoxes = document.querySelectorAll('.menu-box');
+    menuBoxes.forEach(box => {
+        box.addEventListener('click', function() {
+            const pageId = this.dataset.page;
             showPage(pageId);
         });
     });
 });
+
 
 
 
