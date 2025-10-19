@@ -26,7 +26,7 @@ body {
 }
 
 .gradient-bg {
-    background-image: url('backrgound.landinpage.jpg');
+    background-image: url('OCTOBER.jpg');
     background-size: cover;
     background-position: center;
     bacjground-repeat: no-repeat;
@@ -57,6 +57,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+
 
 
 
