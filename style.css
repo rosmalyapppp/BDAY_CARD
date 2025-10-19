@@ -58,7 +58,20 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+.menu-item {
+    margin-bottom: 20px;
+}
 
 
 
