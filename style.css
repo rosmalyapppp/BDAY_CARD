@@ -168,7 +168,9 @@ body {
     box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }
 
-.menu-box {
+.menu-box,
+.menu-item > div,
+.calendar-day {
     background-color: rgba(0,0,0,0.5);
     backdrop-filter: blur(6px);
     border-radius: 16px;
@@ -179,10 +181,12 @@ body {
     position: relative;
 }
 
-.menu-box:hover {
+.menu-box:hover,
+.calendar-day:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
 
 
 
