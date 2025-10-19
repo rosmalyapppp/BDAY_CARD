@@ -119,12 +119,13 @@ const menuBoxes = document.querySelectorAll('.menu-box');
 
 const navButtons = document.querySelectorAll('.nav-btn');
     navButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', function() {
             const pageId = btn.dataset.page;
             showPage(pageId);
         });
     });
 });
+
 
 
 
