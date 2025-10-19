@@ -124,12 +124,13 @@ body {
 
 }
 
-#calendar {
+.calendar-bg {
     background-image: url('CALENDAR.mp4');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 
 
 
