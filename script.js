@@ -104,12 +104,6 @@ function playWish(wishNumber) {
 }
 
 
-function showPage(pageId) {
-  const pages = document.querySelectorAll('.page');
-  pages.forEach(page => page.classList.add('hidden'));
-  document.getElementById(pageId).classList.remove('hidden');
-}
-
 function openLetter1() {
   showPage('letter1');
 }
@@ -132,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
