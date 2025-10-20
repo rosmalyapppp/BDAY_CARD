@@ -72,7 +72,7 @@ function generateCalendar() {
 
             dayCell.addEventListener('click', () => {
                 const todayText = document.querySelector('#birthdayDate + div') || document.getElementById('birthdayDate');
-                todayText.textContent = "🎉 It's YOUR day! Celebrate and shine! 🎉";
+                todayText.textContent = "🔮 It's Finally Here: The Day to Shine! 🔮";
             });
         } else {
             dayCell.textContent = day;
@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
