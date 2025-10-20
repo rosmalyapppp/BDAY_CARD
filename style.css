@@ -166,6 +166,10 @@ body {
     box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }
 
+#calendar .max-w-4xl {
+  margin-top: 3rem;
+}
+
 .menu-box,
 .menu-item > div,
 .calendar-day {
@@ -184,6 +188,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+
 
 
 
