@@ -12,12 +12,19 @@ function toggleMusic() {
     const disc = document.querySelector('.music-disc');
     const playIcon = document.getElementById('playIcon');
     const music = document.getElementById('bgMusic');
-    music.volume = 1;
+    
     
     isPlaying = !isPlaying;
     if (isPlaying) {
         disc.classList.add('playing');
         playIcon.textContent = '⏸';
+        music.volume = 0.7;
+        music.play().then(() => {
+            console.log("🎵 Music is playing!");
+        }).catch(err => {
+            console.warn("⚠️ Music play blocked by browser:", err);
+            alert("Please click the disc again to start the music 🎶");
+        });
     } else {
         disc.classList.remove('playing');
         playIcon.textContent = '▶';
@@ -133,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
