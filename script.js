@@ -11,6 +11,7 @@ function showPage(pageId) {
 function toggleMusic() {
     const disc = document.querySelector('.music-disc');
     const playIcon = document.getElementById('playIcon');
+    const music = document.getElementById('bgMusic');
     
     isPlaying = !isPlaying;
     if (isPlaying) {
@@ -126,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
