@@ -13,23 +13,28 @@ function toggleMusic() {
     const playIcon = document.getElementById('playIcon');
     const music = document.getElementById('bgMusic');
     
-    
-    isPlaying = !isPlaying;
-    if (isPlaying) {
+     if (!music.paused) {
+    music.pause();
+    disc.classList.remove('playing');
+    playIcon.textContent = '▶';
+    console.log("⏸ Music stopped");
+  } 
+  // kalau musik lagi mati → play
+  else {
+    music.volume = 0.7;
+    music.play()
+      .then(() => {
         disc.classList.add('playing');
         playIcon.textContent = '⏸';
-        music.volume = 0.7;
-        music.play().then(() => {
-            console.log("🎵 Music is playing!");
-        }).catch(err => {
-            console.warn("⚠️ Music play blocked by browser:", err);
-            alert("Please click the disc again to start the music 🎶");
-        });
-    } else {
-        disc.classList.remove('playing');
-        playIcon.textContent = '▶';
-    }
+        console.log("🎵 Music playing");
+      })
+      .catch(err => {
+        console.warn("⚠️ Play blocked by browser:", err);
+        alert("Please click once more to start the music 🎶");
+      });
+  }
 }
+    
 
 function blowCandles() {
     const wishMessage = document.getElementById('wishMessage');
@@ -140,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
