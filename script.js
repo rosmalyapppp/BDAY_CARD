@@ -33,7 +33,7 @@ function toggleMusic() {
 
 function blowCandles() {
     const wishMessage = document.getElementById('wishMessage');
-   wishMessage.textContent = '💫🍻 Your wish has been made! May all your dreams come true! 🍻💫';
+   wishMessage.textContent = '💫 Your wish has been made! May all your dreams come true! 💫';
     wishMessage.classList.remove('opacity-0');
     wishMessage.classList.add('opacity-100', 'text-pink-500');
 
@@ -79,7 +79,7 @@ function generateCalendar() {
 
             dayCell.addEventListener('click', () => {
                 const todayText = document.querySelector('#birthdayDate + div') || document.getElementById('birthdayDate');
-                todayText.textContent = "🔮 It's Finally Here: The Day to Shine! 🔮";
+                todayText.textContent = "🐣 생일 축하합니다 🐣";
             });
         } else {
             dayCell.textContent = day;
@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
