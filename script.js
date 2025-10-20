@@ -35,11 +35,11 @@ function blowCandles() {
     const wishMessage = document.getElementById('wishMessage');
    wishMessage.textContent = '💫 Your wish has been made! May all your dreams come true! 💫';
     wishMessage.classList.remove('opacity-0');
-    wishMessage.classList.add('opacity-100', 'text-pink-500');
+    wishMessage.classList.add('opacity-100', 'text-black-500');
 
     setTimeout(() => {
         wishMessage.innerHTML = '🎊 Happy Birthday! 🎊';
-        wishMessage.classList.add('text-pink-150');
+        wishMessage.classList.add('text-black-150');
     }, 2000);
 }
 
@@ -140,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
