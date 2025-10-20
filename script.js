@@ -12,6 +12,7 @@ function toggleMusic() {
     const disc = document.querySelector('.music-disc');
     const playIcon = document.getElementById('playIcon');
     const music = document.getElementById('bgMusic');
+    music.volume = 1;
     
     isPlaying = !isPlaying;
     if (isPlaying) {
@@ -127,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
