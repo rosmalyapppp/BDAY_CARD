@@ -77,10 +77,9 @@ function generateCalendar() {
         const dayCell = document.createElement('div');
         dayCell.className = 'calendar-day flex items-center justify-center';
         
-        if (day === today.getDate()) {
+        if (day === 20) {
             dayCell.classList.add('bg-gradient-to-r', 'from-pink-400', 'to-purple-500', 'text-black', 'text-xl', 'font-bold');
             dayCell.innerHTML = `${day} 🎂`;
-            console.log('Highlighting day:', day);
 
             dayCell.addEventListener('click', () => {
                 const todayText = document.querySelector('#birthdayDate + div') || document.getElementById('birthdayDate');
@@ -145,6 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
