@@ -53,7 +53,7 @@ function generateCalendar() {
     const birthdayDate = document.getElementById('birthdayDate');
     const today = new Date();
 
-    const fixedDate = new Date('2025-10-20T00:00:00');
+    const fixedDate = new Date('2025-10-21T00:00:00');
     birthdayDate.textContent = fixedDate.toLocaleDateString('en-US', { 
         weekday: 'long', 
         year: 'numeric', 
@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
