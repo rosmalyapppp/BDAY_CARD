@@ -53,14 +53,7 @@ function generateCalendar() {
     const birthdayDate = document.getElementById('birthdayDate');
     const today = new Date();
 
-    const fixedDate = new Date('2025-10-21T00:00:00');
-    birthdayDate.textContent = fixedDate.toLocaleDateString('en-US', { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric',
-        timeZone: 'UTC'
-    });
+    birthdayDate.textContent = "Monday, October 20, 2025";
 
     const year = today.getFullYear();
     const month = today.getMonth();
@@ -146,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 
 
